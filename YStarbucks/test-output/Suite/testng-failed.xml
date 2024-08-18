@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="qalisteners.MyListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="testclasses.testSignUpInProfile">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="sendDataToLogin" invocation-numbers="1 2 3"/>
+          <include name="openBrowser"/>
+          <include name="pomObjects"/>
+        </methods>
+      </class> <!-- testclasses.testSignUpInProfile -->
+      <class name="testclasses.testSigninInProfile">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="sendDataToLogin" invocation-numbers="1"/>
+          <include name="pomObjects"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- testclasses.testSigninInProfile -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
